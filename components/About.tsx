@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { FiCheckCircle } from "react-icons/fi";
 import { about, consultant } from "@/lib/content";
+import { asset } from "@/lib/paths";
 import Reveal from "./Reveal";
 
 export default function About() {
@@ -18,7 +19,7 @@ export default function About() {
               <div className="relative overflow-hidden rounded-3xl shadow-card">
                 <div className="aspect-[4/3]">
                   <Image
-                    src={consultant.photo}
+                    src={asset(consultant.photo)}
                     alt={consultant.name}
                     width={800}
                     height={600}

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { HiArrowRight } from "react-icons/hi";
 import { FiCheckCircle } from "react-icons/fi";
 import { company, consultant, heroChips } from "@/lib/content";
+import { asset } from "@/lib/paths";
 
 export default function Hero() {
   return (
@@ -76,7 +77,7 @@ export default function Hero() {
               <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/5 p-2 shadow-card backdrop-blur">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
                   <Image
-                    src={consultant.photo}
+                    src={asset(consultant.photo)}
                     alt={`${consultant.name} — ${consultant.title}`}
                     fill
                     priority
