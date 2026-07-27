@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* offset for sticky navbar on anchor jumps */
+  }
+
+  body {
+    @apply bg-white text-navy-900 font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-accent-500 text-white;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent-500 text-white shadow-soft hover:-translate-y-0.5 hover:bg-accent-600 hover:shadow-card;
+  }
+
+  .btn-ghost {
+    @apply btn border border-navy-100 bg-white text-navy-800 hover:border-accent-300 hover:text-accent-600;
+  }
+
+  .btn-light {
+    @apply btn border border-white/20 bg-white/10 text-white backdrop-blur hover:bg-white/20;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-accent-100 bg-accent-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent-700;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl lg:text-[2.75rem] lg:leading-tight;
+  }
+
+  .card {
+    @apply rounded-3xl border border-navy-100/70 bg-white p-7 shadow-soft transition-all duration-300;
+  }
+}
+
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #eef2fb;
+}
+::-webkit-scrollbar-thumb {
+  background: #b6c4dc;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7e9bde;
+}
